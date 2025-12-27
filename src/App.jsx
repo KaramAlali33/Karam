@@ -26,10 +26,10 @@ const Portfolio = () => {
       icon: <Smartphone className="w-5 h-5" />,
       category: 'Mobile Dev',
       images: [
-        '/computerparts1.png',
-        '/computerparts2.png',
-        '/computerparts3.png',
-        '/computerparts4.png'
+        'computerparts1.png',
+        'computerparts2.png',
+        'computerparts3.png',
+        'computerparts4.png'
       ],
       github: 'https://github.com/KaramAlali33/ComputerPartsAPP',
       highlights: ['Local Storage', 'Search Filter', 'Cart System']
@@ -41,9 +41,9 @@ const Portfolio = () => {
       icon: <Smartphone className="w-5 h-5" />,
       category: 'Mobile Dev',
       images: [
-        '/salati1.png',
-        '/salati2.png',
-        '/salati3.png'
+        'salati1.png',
+        'salati2.png',
+        'salati3.png'
       ],
       github: 'https://github.com/KaramAlali33/Salati',
       highlights: ['Clean UI', 'Product Carousels', 'Cart Management']
@@ -55,8 +55,8 @@ const Portfolio = () => {
       icon: <Brain className="w-5 h-5" />,
       category: 'AI/ML',
       images: [
-        '/churn1.png',
-        '/churn2.png'
+        'churn1.png',
+        'churn2.png'
       ],
       github: 'https://github.com/KaramAlali33/Customer_Churn_Prediction/blob/main/Customer_Churn_Prediction.ipynb',
       highlights: ['ML Pipeline', 'Hyperparameter Tuning', 'High ROC-AUC']
@@ -68,9 +68,9 @@ const Portfolio = () => {
       icon: <Database className="w-5 h-5" />,
       category: 'Desktop Dev',
       images: [
-        '/bmi1.png',
-        '/bmi2.png',
-        '/bmi3.png'
+        'bmi1.png',
+        'bmi2.png',
+        'bmi3.png'
       ],
       github: 'https://github.com/KaramAlali33/MI-Tracker-Profile-Manager-',
       highlights: ['Data Validation', 'BMI Calculator', 'Visual Analytics']
@@ -153,7 +153,7 @@ const Portfolio = () => {
               <div className={`absolute inset-0 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-full blur-xl ${isDarkMode ? 'opacity-30' : 'opacity-20'} group-hover:opacity-50 transition-opacity`}></div>
               <div className={`relative w-56 h-56 rounded-full overflow-hidden border-4 ${isDarkMode ? 'border-slate-800' : 'border-white'} shadow-2xl ${isDarkMode ? 'shadow-emerald-500/20' : 'shadow-emerald-500/10'}`}>
                 <img 
-                  src="/karam.jpg" 
+                  src="karam.jpg" 
                   alt="Karam Wasfi Alali" 
                   className="w-full h-full object-cover"
                 />
