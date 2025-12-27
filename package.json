@@ -12,7 +12,7 @@
   "deploy": "gh-pages -d dist"
 }
 ,
-  "homepage": "https://KaramAlali33.github.io/Karam_Protfolio",
+  "homepage": "https://KaramAlali33.github.io/Karam",
   "dependencies": {
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
