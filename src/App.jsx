@@ -500,16 +500,36 @@ const Portfolio = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "41c3e546-4b44-4b38-a2f6-4378904b0108",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setSubmitSuccess(false), 4000);
+      } else {
+        alert(data.message || "Failed to send message, please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setSubmitSuccess(false), 3000);
-    }, 1500);
+    }
   };
 
   const { scrollYProgress } = useScroll();
